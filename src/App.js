@@ -10,8 +10,13 @@ import About from "./Pages/About/About";
 import Skills from "./Pages/Skills/Skills";
 import Contact from "./Pages/Contact/Contact";
 
+import ScrolltoTop from './Components/ScrollTop/ScrolltoTop';
+
 const App = () => {
   // Create refs for each section
+
+  const navbarRef = useRef(null);
+
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const educationRef = useRef(null);
@@ -32,17 +37,20 @@ const App = () => {
 
       <div id="starsContainerData">
         <Suspense fallback={<LoadingSnippet />}>
-          <Navbar
-            scrollToSection={scrollToSection}
-            refs={{ homeRef, aboutRef, educationRef, skillsRef, projectsRef, contactRef }}
-          />
+          
+          <div ref={navbarRef}>
+            <Navbar
+              scrollToSection={scrollToSection}
+              refs={{ homeRef, aboutRef, educationRef, skillsRef, projectsRef, contactRef, navbarRef}}
+            />
+          </div>
 
           <div ref={homeRef}>
-            <Home />
+            <Home scrollToSection={scrollToSection} projectsRef = {projectsRef}/>
           </div>
 
           <div ref={aboutRef}>
-            <About />
+            <About  scrollToSection={scrollToSection} contactRef = {contactRef}/>
           </div>
 
           <div ref={educationRef}>
@@ -62,7 +70,13 @@ const App = () => {
           </div>
 
         </Suspense>
+
       </div>
+
+      <span className="scrollBarBtn">
+        <ScrolltoTop scrollToSection={scrollToSection} navbarRef = {navbarRef}/>
+      </span>
+
     </div>
   );
 };

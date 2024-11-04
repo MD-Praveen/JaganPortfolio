@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import styles from "./navbar.module.css";
+
 import homeImg from "../../Assets/Images/NavImages/home.png";
 import aboutImg from "../../Assets/Images/NavImages/about.png";
 import educationImg from "../../Assets/Images/NavImages/education.png";
 import skillsImg from "../../Assets/Images/NavImages/skill.png";
 import projectImg from "../../Assets/Images/NavImages/project.png";
 import contactImg from "../../Assets/Images/NavImages/contact.png";
+import images from "../../images";
 
 const Navbar = ({ scrollToSection, refs }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,9 +21,10 @@ const Navbar = ({ scrollToSection, refs }) => {
       <nav className={styles.navContainer}>
         <div>
           <img
-            src="https://uxwing.com/wp-content/themes/uxwing/images/buymeacoffee.png"
+            src={images.myLogo}
             alt="Icon"
             className={styles.logo}
+            onClick={() => scrollToSection(refs.navbarRef)}
           />
         </div>
         <ul className={styles.navLinks}>

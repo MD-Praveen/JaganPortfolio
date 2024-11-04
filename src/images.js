@@ -1,4 +1,4 @@
-import programmerImg from './Assets/Images/programmer.svg';
+import myLogo from './Assets/myLogo.png';
 
 import pythomImage from './Assets/python.png';
 
@@ -28,7 +28,8 @@ import instagramImg from './Assets/socialIcons/instagram.png';
 
 
 const images ={
-    programmerImg,
+    myLogo,
+    
     pythomImage,
     htmlImage,
     cssImage,

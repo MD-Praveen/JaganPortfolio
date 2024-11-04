@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './About.module.css'
 
-const About = () => {
+const About = ({scrollToSection, contactRef}) => {
 
     const developerImg = "https://cdn.sanity.io/images/soweeiig/production/bd5cbf6bbdc10e8243467595a6ee6f6e44ceb5fd-1600x1200.jpg";
     const problemsolverImg = "https://cdn.sanity.io/images/soweeiig/production/3dfa9ab583dffbb72fdffb5c74b06b6649f2a99b-626x626.png";
@@ -21,7 +21,7 @@ const About = () => {
                     Hi there, I'm <span>Jagan</span> – a full stack web developer (<span>MERN</span> stack) with <span>a full interest in React</span>, focused on creating <span>efficient, user-centered applications</span>. I graduated in <span>2023</span> with a <span>B.Tech in Computer Science</span>, and I'm passionate about building <span>impactful web applications</span> that prioritize both <span>impactful web applications</span>. I'm a <span>quick learner</span>, always eager to expand my skills and take on new challenges.
                 </p>
                 <p>
-                    I'm open to <span>Job opportunities</span> where I can <span>contribute, learn and grow.</span> If you have a good opportunity that matches my skills then don't hesitate to <a href='#contact' className={styles.contact}>contact me.</a>
+                    I'm open to <span>Job opportunities</span> where I can <span>contribute, learn and grow.</span> If you have a good opportunity that matches my skills then don't hesitate to <a href='#contact' className={styles.contact} onClick={() => scrollToSection(contactRef)}>contact me.</a>
                 </p>
             </div>
         </div>

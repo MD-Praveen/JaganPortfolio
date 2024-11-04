@@ -4,14 +4,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 12px 20px;
     background-color: transparent;
     font-family: "Lora", serif;
     position: relative;
+
 }
 
 .logo {
-    width: 150px;
+    width: 80px;
+    cursor: pointer;
 }
 
 .navLinks {
